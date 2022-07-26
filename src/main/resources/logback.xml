@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+
+        <encoder>
+            <pattern>[%X{SERVICECOMB_TRACE_ID}] %d [%level] [%thread] - %msg (%F:%L\)%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 指定 com.imooc.log.stack 下的日志打印级别, appender -->
+    <logger name="org.example" level="info" additivity="false">
+        <appender-ref ref="STDOUT"/>
+
+
+    </logger>
+
+
+    <!-- 根 logger -->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+
+
+    </root>
+
+</configuration>

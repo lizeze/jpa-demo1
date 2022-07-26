@@ -1,0 +1,16 @@
+APPLICATION_ID: sample
+service_description:
+  name: helloworld-provider
+  version: 1.0.2
+servicecomb:
+  error:
+    printSensitiveErrorMessage: true
+  accesslog:
+    enabled: true
+  service:
+    environment: development
+    registry:
+      address: http://192.168.14.87:30100
+  rest:
+    address: 0.0.0.0:8080
+ 
